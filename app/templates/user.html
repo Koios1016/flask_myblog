@@ -1,9 +1,9 @@
-% extends "base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
     <table>
         <tr valign="top">
-            #可以更改用户头像的大小
+            {#            可以更改用户头像的大小#}
             <td><img src="{{ user.avatar(128) }}"></td>
             <td>
                 <h1>用户名: {{ user.username }}</h1>

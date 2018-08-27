@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_login import LoginManager
+from flask_login import LoginManager, login_manager
 # 导入配置文件
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
@@ -11,11 +11,12 @@ app = Flask(__name__)
 app.config.from_object(Config)
 login = LoginManager(app)
 
-login.login_view = 'login'
-
 # 建立数据库关系
 db = SQLAlchemy(app)
 # 绑定app和数据库，以便进行操作
 migrate = Migrate(app, db)
 
 from app import routes, models
+
+login.login_view = 'login'
+
