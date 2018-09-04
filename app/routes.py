@@ -24,7 +24,7 @@ def index():
 
         },
         {
-            'author': {'username': '忠强'},
+            'author': {'username': '小强'},
             'body': '这是模板模块中的循环例子～2'
         }
     ]
